@@ -1,16 +1,36 @@
-# React + Vite
+# Resume Matcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Paste your resume and a job description — instantly see how well you match.
 
-Currently, two official plugins are available:
+**Live demo:** https://frontend-kappa-beige-27.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Upload resume as PDF, DOCX, or TXT — text is extracted automatically
+- Keyword analysis against the job description with a match score
+- Phrase matching for common tech terms (machine learning, CI/CD, REST API, etc.)
+- Score breakdown: keyword match (70%) + phrase match (30%)
+- Actionable suggestions to improve your resume for ATS
+- Export results as PDF via browser print
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19 + Vite
+- `pdfjs-dist` for PDF parsing
+- `mammoth` for DOCX parsing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open http://localhost:5173
+
+## Build
+
+```bash
+npm run build
+```
